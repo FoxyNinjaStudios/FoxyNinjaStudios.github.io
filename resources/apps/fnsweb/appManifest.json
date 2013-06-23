@@ -1,0 +1,19 @@
+{
+	"version": "1.0",
+	"name": "Foxy Ninja Studios",
+	"appID": "fnsweb",
+	"location": "resources/fnsweb",
+	"canvases": ["fnsweb-mainMenu", "fnsweb-basics", "fnsweb-aboutFNS", "fnsweb-apps", "fnsweb-people", "fnsweb-hireUs", "fnsweb-philosophy"],
+	"maincanvas": "fnsweb-mainMenu",
+	"mainmenubuttons": ["buttonAboutFNS", "buttonApps", "buttonPeople", "buttonHireUs", "buttonPhilosophy"],
+	"mainmenubuttontargets": ["fnsweb-aboutFNS", "fnsweb-apps", "fnsweb-people", "fnsweb-hireUs", "fnsweb-philosophy"],
+	"scrolls": ["fnsweb-aboutFNS", "fnsweb-apps", "fnsweb-people", "fnsweb-hireUs", "fnsweb-philosophy", "fnsweb-mainMenu", "fnsweb-basics"],
+	"plugins": ["none"],
+	"mainMenuOverlayAllowed": "true",
+	"overlays": ["none"],
+	"mainMenuFlair": "fnsweb-basics",
+	"header": ["$??headerTitle?appHeaderTitle?",
+				"$??headerButton?homeButton?",
+				"$??menuVisible?appMenuToggle?",
+				"$??headerButton?appInfoButton?"]
+}

@@ -1,0 +1,408 @@
+@pColor1 : rgb(59,64,83);
+@pColor2 : rgb(228,233,221);
+@pColor3 : rgb(155,83,71);
+@sColor1 : rgb(210,210,145);
+@sColor2 : rgb(171,173,104);
+@hilite: gold; 
+@hiliteneg: silver; 
+
+@lightblue: rgb(191,240,250);
+
+.transition(@duration: 700ms)
+{
+transition-property: all;
+transition-timing-function: linear;
+transition-duration: @duration;
+-webkit-transition-duration: @duration;
+-webkit-transition-property: all;
+-webkit-transition-timing-function: linear;
+-moz-transition-duration: @duration;
+-moz-transition-property: all;
+-moz-transition-timing-function: linear;
+-ms-transition-duration: @duration;
+-ms-transition-property: all;
+-ms-transition-timing-function: linear;
+}
+
+
+.glassFinish
+{
+background-image: url("../../../images/glass.png");
+background-position:50%;
+background-repeat: repeat-x;
+}
+
+@font-face {
+  font-family: "Brawler";
+  src: url("fonts/Brawler.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lusitana";
+  src: url("fonts/Lusitana.ttf") format("truetype");
+}
+
+body{
+   font-family: Brawler;
+   background-image: url(images/wood.jpg);
+   color: rgb(139,69,19);
+}
+
+a
+{
+  color: @pColor3;
+  font-weight: bold;
+}
+
+a:visited
+{
+  color: @pColor1;
+}
+
+#headerWrapper
+{
+   background-image: url(images/wood.jpg);
+}
+
+#adFooterWrapper
+{
+   background-image: url(images/curtainud.png);
+   background-size: 160px;
+   background-repeat: repeat-x;
+   height: 100px;
+}
+
+.buttonsWrapper3Items .listButton
+{
+	font-size: 24px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: Lusitana;
+  height: 45px;
+  font-weight: bold;
+  padding-left: 30px;
+  margin-left: -30px;
+  border-radius: 30px;
+  overflow: visible;
+  min-width: 180px;
+  box-shadow: transparent 1px 1px 5px;
+}
+
+.web .listButton:hover 
+{
+  text-decoration: underline;
+}
+
+.web .aTextButton:hover 
+{
+  background-color: rgb(77, 144, 255);
+  text-decoration: underline;
+}
+
+.heading
+{
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.para
+{
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 24px;
+}
+
+.msgList
+{
+  color: black;
+  text-shadow: gray 0px 1px 1px;
+}
+
+.aMessage:active
+{
+  background-color: rgba(83, 166, 204, .5);
+}
+
+.headerTitle
+{
+  color: rgb(245,245,220);
+	text-shadow: black 1px -1px 1px;
+}
+
+.wrapper
+{
+   background-image: url(images/woodalt.jpg);
+   width: 80%;
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 25px;
+   padding-bottom: 20px;
+   margin-left: 5%;
+   margin-top: 15px;
+   margin-bottom: 30px;
+   border-radius: 10px;
+   box-shadow: black 1px 1px 2px;
+   max-width: 600px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.aTextButtonLI
+{
+  color: rgb(0,0,0);
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url(images/tick.png);
+  padding-left: 55px;
+  padding-right: 15px;
+  width: 80%;
+  border-radius: 10px;
+  text-shadow: none;
+  display: block;
+  line-height: 30px;
+  height: auto;
+  background-position: 2px 50%;
+  background-size: 30px;
+  background-repeat: no-repeat no-repeat;
+  font-size: 20px;
+}
+
+.aTextButton
+{
+  color: rgb(0,0,0);
+  text-align: center;
+  border-radius: 20px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: auto;
+  background-color: rgb(113,178,56);
+  border-radius: 10px;
+  box-shadow: black 1px 1px 2px;
+  max-width: 300px;
+  .glassFinish();
+  display: inline-block;
+}
+
+.touchSupport .aTextButton
+{
+  max-width: 80%;
+}
+
+.aTextButton p
+{
+  font-size: 18px;
+  margin: 0px;
+  display: block;
+  font-weight: bold;
+}
+
+.aTextButton em
+{
+  font-size: 16px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  color: white;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+
+.aMessage
+{
+  box-shadow: black 1px 1px 2px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: @pColor1;
+  background-color: @pColor2;
+  background-image: url(images/paper.jpg);
+}
+
+.aMessageRec
+{
+  background-image: url(images/recpaper.jpg);
+}
+
+.aMessage p
+{
+  font-size: 22px;
+}
+
+.aMessage em
+{
+  font-size: 16px;
+}
+
+.loadMoreMsgs
+{
+  border: 1px solid rgb(200,200,200,.2);
+  box-shadow: @pColor3 0px 1px 2px;
+  border-radius: 10px;
+  .glassFinish();
+  margin-bottom: 10px;
+  color: @pColor1;
+  background-color: @pColor2;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: -50px;
+}
+
+.loadMoreMsgs p
+{
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  margin: 10px;
+}
+
+#messagesPluginHW
+{
+  background-color: @pColor3;
+  box-shadow: 0px -1px 5px black;
+}
+
+#messagesPluginScreen
+{
+  background-color: @pColor2;
+}
+
+#maincanvasWrapper
+{
+   background-image: url(images/wood.jpg);
+   color: rgb(245,245,220);
+}
+
+.textTitle
+{
+  width: 100%;
+  font-size: 28px;
+}
+
+.textName
+{
+  width: 100%;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: white 0px 1px 0px;
+}
+
+.text
+{
+  width: 100%;
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: rgba(20,20,20,1);
+  text-shadow: none;
+}
+
+.textDesig
+{
+  width: 100%;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: white 0px 1px 0px;
+}
+
+#helpText
+{
+  text-transform: uppercase;
+  color: rgb(20,20,20);
+  margin-top: 25px;
+  font-size: 32px;
+  text-align: center;
+  min-width: 100%;
+  display: block;
+}
+
+.androidDW
+{
+  background-image: url("../../../images/androidDW.png");
+  background-position:0px 50%;
+  height: 60px;
+  margin: 20px;
+  background-repeat: no-repeat no-repeat;
+  background-size: 200px;
+  width: 200px;
+  display: inline-block;
+}
+
+.iOSDW
+{
+  background-image: url("../../../images/iOSDW.png");
+  background-position:0px 50%;
+  height: 60px;
+  margin: 20px;
+  background-repeat: no-repeat no-repeat;
+  background-size: 200px;
+  width: 200px;
+  display: inline-block;
+}
+
+.chromeDW
+{
+  background-image: url("../../../images/chromeDW.png");
+  background-position:0px 50%;
+  height: 60px;
+  margin: 20px;
+  background-repeat: no-repeat no-repeat;
+  background-size: 200px;
+  width: 200px;
+  display: inline-block;
+}
+
+.photo
+{
+  background-position: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat no-repeat;
+  background-size: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 240px;
+  max-width: 90%;
+}
+
+.listButtonLabel
+{
+  line-height: 45px;
+  width: 100%;
+  overflow: visible;
+  text-shadow: none;
+}
+
+/*
+.web .fullScreen
+{
+  .transition(.7s);
+}
+
+.touchSupport .fullScreen
+{
+  .transition(.3s);
+}
+*/
+#appMenuToggle
+{
+  margin-top: -100px;
+}

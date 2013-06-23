@@ -1,0 +1,129 @@
+<html> 
+<head>   
+	
+	<title> Foxy Ninja Studios </title>
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">    
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="YES">
+	<meta name = "format-detection" content = "telephone=yes">
+      
+	<script type="text/javascript"> 
+		document.addEventListener('touchmove', function(event){event.preventDefault();}, false);
+	</script>
+	
+	<link rel="stylesheet/less" type="text/less" href="less/anappforme.less">   
+
+	<script src="js/basics/less.1.3.0.js" type="text/javascript"></script>
+	<script src="js/basics/jquery-1.8.0.min.js" type="text/javascript"></script>
+	<script src="js/basics/jQmouseWheel.js" type="text/javascript"></script>
+	<script src="js/basics/iscroll.4.2.js" type="text/javascript"></script>
+	<script src="js/fnslib.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="js/init.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script> 
+
+  <!-- styles needed by jScrollPane -->
+  <link type="text/css" href="less/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+  <!-- the mousewheel plugin - optional to provide mousewheel support -->
+  <script type="text/javascript" src="js/basics/jquery.mousewheel.js"></script>
+
+  <!-- the jScrollPane script -->
+  <script type="text/javascript" src="js/basics/jquery.jscrollpane.min.js"></script>
+	           
+	<style>
+	@-webkit-keyframes infinite-spinning {
+	  from {
+	    -webkit-transform: rotate(0deg);
+	  }
+	  to {
+	    -webkit-transform: rotate(360deg);
+	  }
+	}
+	</style>
+	
+</head>
+
+<body id="body" onload="motherofall()">
+	<div id="canvasWrapper" class="fullWrapper"> </div>
+	<div id="overlayWrapper" class="fullWrapper"> </div>
+	<div id="headerWrapper" class="headerWrapper"> </div> 
+	
+	<div id="servicesWrapper" class="fullWrapper"> 
+		<div id="splashScreenSW" class="fullWrapper">
+			<div id="loadingTextSW" class="loadingText"> Loading Slideshow </br> please wait ...</div> 
+			<div id="splashRollerSW"> </div> 
+		</div>
+		 
+		<div id="spCanvasslideShow" class="canvas fullScreen">
+			<div id="spCanvasslideShowScrollWrapper" class="fullScreenWrapper">	</div>
+		</div>
+		<div id="slideShowNext" class="shareWrapperButton"> </div>
+		<div id="slideShowPrev" class="shareWrapperButton"> </div>
+		<div class="shareWrapper">
+			<div id="slideShowFacebook" class="shareWrapperButton"> </div>
+			<div id="slideShowTwitter" class="shareWrapperButton"> </div>
+			<div id="slideShowLink" class="shareWrapperButton"> </div>
+			<div id="slideShowEmail" class="shareWrapperButton"> </div>
+		</div>
+	</div> 
+	<div id="maincanvasWrapper" class="fullWrapper">
+		<div id="maincanvasImage" class="maincanvasImage"></div>
+	</div>
+  <div id="filtersWrapper">
+    <div id="monthYearWrapper">
+<select name="dateMonth" id="dateMonth" class="dateoption" onchange="dateChanged()">
+      <option value="0" selected="selected">select month</option>
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+    <select name="dateYear" id="dateYear" class="dateoption" onchange="dateChanged()">
+      <option value="0" selected="selected">select year</option>
+      <option value="2012">2012</option>
+      <option value="2013">2013</option>
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017">2017</option>
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+    </select>
+  </div>
+</div>
+
+<div id="messagesPluginScreen">
+  <div id="messagesPluginCWW">
+    <div id="messagesPluginCW">
+      <div id="messagesPluginTitle"> </div>
+      <div id="messagesPluginContent"> </div>
+    </div>
+  </div>
+  <div class="headerWrapper" id="messagesPluginHW">
+    <div class="mpPluginButton" id="mpPluginDone"> <p>Done</p></div>
+    <div class="mpPluginButton" id="mpPluginNext"> </div>
+    <div class="mpPluginButton" id="mpPluginPrev"> </div>
+    <div class="mpPluginButton" id="mpPluginFav"> </div>
+    <div class="mpPluginButton" id="mpPluginShare"> </div>
+    <div class="mpPluginButton" id="mpPluginComments"> </div>
+  </div>
+
+</div>
+
+	<div id="splashScreen" class="black fullWrapper"> <div id="splashRoller"> </div> <div id="poweredbyText" class="poweredbyText"> Loading ...</div> <div style="display:none" class="poweredbyImage"> </div> </div> 
+</body>    
+
+
+</html>
