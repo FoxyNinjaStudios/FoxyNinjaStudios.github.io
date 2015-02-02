@@ -3,6 +3,10 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+  @font-face {
+          font-family: American Typewriter;
+              src: url(AmericanTypewriter.ttc);  /* contains multiple font faces */
+                }
 
 body {
     overflow-x: hidden;
@@ -215,32 +219,36 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: #121;
+    border:1px solid transparent;
+    border-radius: 5px;
 }
 
-.navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
+/* .navbar-default .nav li a:focus, */
+.navbar-default .nav li a:hover{
     outline: 0;
     color: sienna;
+    border: 1px solid;
 }
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
     background-color: sienna;
+    border-color: transparent;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
-    background-color: #fec503;
+    background-color: sienna;
 }
 
 @media(min-width:768px) {
     .navbar-default {
         padding: 25px 0;
         border: 0;
-        background-color: transparent;
+        background-color: rgba(255,255,255,.9);
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -259,7 +267,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: rgba(255,255,255,.9);
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -271,7 +279,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url(../img/header-bg.png);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -289,17 +297,21 @@ header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
-    font-style: italic;
+    font-style: italic;transparent;
     line-height: 22px;
 }
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Courier New", Courier, monospace;
     font-size: 50px;
-    font-weight: 700;
+    font-weight: normal;
     line-height: 50px;
+    color: #232323;
+    background-color: rgba(255,255,255,.3);
+    text-shadow: 2px 8px 6px sienna,
+                     0px -5px 35px rgba(255,255,255,0.3);
 }
 
 @media(min-width:768px) {
@@ -319,9 +331,8 @@ header .intro-text .intro-heading {
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Courier New", Courier, monospace;
         font-size: 75px;
-        font-weight: 700;
         line-height: 75px;
     }
 }
