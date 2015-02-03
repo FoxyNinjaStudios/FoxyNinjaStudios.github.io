@@ -88,7 +88,6 @@ h6 {
 .open .dropdown-toggle.btn-primary {
     border-color: #f6bf01;
     color: #fff;
-    background-color: #fec503;
 }
 
 .btn-primary:active,
@@ -221,7 +220,6 @@ fieldset[disabled] .btn-xl.active {
     letter-spacing: 1px;
     color: #121;
     border:1px solid transparent;
-    border-radius: 5px;
 }
 
 /* .navbar-default .nav li a:focus, */
@@ -305,7 +303,7 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: "Courier New", Courier, monospace;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: normal;
     line-height: 50px;
     color: #232323;
@@ -864,11 +862,13 @@ ul.social-buttons li a:active {
 ::-moz-selection {
     text-shadow: none;
     background: sienna;
+    color: white;
 }
 
 ::selection {
     text-shadow: none;
     background: sienna;
+    color: white;
 }
 
 img::selection {
