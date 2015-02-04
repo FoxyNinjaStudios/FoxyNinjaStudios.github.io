@@ -128,7 +128,6 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl:hover,
-.btn-xl:focus,
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
@@ -149,9 +148,6 @@ fieldset[disabled] .btn-xl,
 .btn-xl.disabled:hover,
 .btn-xl[disabled]:hover,
 fieldset[disabled] .btn-xl:hover,
-.btn-xl.disabled:focus,
-.btn-xl[disabled]:focus,
-fieldset[disabled] .btn-xl:focus,
 .btn-xl.disabled:active,
 .btn-xl[disabled]:active,
 fieldset[disabled] .btn-xl:active,
@@ -184,7 +180,6 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
     color: #fec503;
@@ -232,7 +227,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
+.navbar-default .navbar-nav>.active>a:active{
     color: #fff;
     background-color: sienna;
 }
@@ -766,15 +761,12 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
     background-color: sienna;
 }
 
-.btn:focus,
 .btn:active,
-.btn.active,
-.btn:active:focus {
+.btn:active{
     outline: 0;
 }
 
