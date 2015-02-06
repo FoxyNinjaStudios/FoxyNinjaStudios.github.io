@@ -213,14 +213,14 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-family: Rancho, cursive;
+    font-weight: bold;
+    letter-spacing: 3px;
     color: #212;
+    border: 1px solid transparent;
 }
 
-.navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
+.navbar-default .nav li a:hover{
     outline: 0;
     color: sienna;
     border-color: sienna;
@@ -296,6 +296,10 @@ header .intro-text .intro-lead-in {
     line-height: 22px;
 }
 
+header .intro-text .intro-heading span{
+    letter-spacing: 9px;
+}
+
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -320,6 +324,9 @@ header .intro-text .intro-heading {
         display: none;
     }
 
+    header .intro-text .intro-heading span {
+        letter-spacing: 30px;
+    }
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
