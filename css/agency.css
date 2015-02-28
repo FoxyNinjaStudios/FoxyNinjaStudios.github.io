@@ -1,4 +1,42 @@
-  @font-face {
+@font-face {
+          font-family: Raleway;
+              src: url(Raleway.ttf); 
+                }
+
+.caresLogo
+    {
+    font-family: Raleway;
+    font-weight: normal;
+}
+
+.caresLogo .gray
+{
+    font-weight: normal;
+    color: #232323;
+    text-shadow: rgba(255, 255, 255, 1) 0px 0px 1px;
+}
+
+.caresLogo .blue
+{
+    font-weight: bold;
+    color: #0090bc;
+    text-shadow: rgba(255, 255, 255, 1) 0px 0px 1px;
+}
+
+.caresLogo .red 
+{
+    font-weight: bold;
+    color: #92278f;
+    font-style: italic;
+    text-transform: lowercase;
+    text-shadow: rgba(255, 255, 255, 1) 0px 0px 1px;
+}
+
+.caresLogo .tm
+{
+}
+
+@font-face {
           font-family: Rancho;
               src: url(Rancho-Regular.ttf); 
                 }
@@ -889,4 +927,9 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: sienna;
+}
+
+.item-intro a
+{
+    padding: 20px;
 }

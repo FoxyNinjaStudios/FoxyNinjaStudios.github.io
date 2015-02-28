@@ -31,11 +31,14 @@ app.get("/", function (req, res) {
 });
 
 app.get("/handleContact", function (req, res) {
-	mailOptions.to = "contact@foxyninjastudios.com"
-	mailOptions.subject = "Contact : foxyninjastudios.com";
+	mailOptions.to = req.query.email;
+	mailOptions.bcc = "contact@foxyninjastudios.com"
+	mailOptions.replyTo = "contact@foxyninjastudios.com"
+	mailOptions.subject = "Thank you for your interest in Foxy Ninja Studios";
 	mailOptions.text = 
-                        "\n"+
-	transport.sendMail(mailOptions, function(error, response){console.log(error)});
+    "We will get back to you ASAP. We recieved the following information from you at " + new Date().toUTCString() + " :\n\n\n" + JSON.stringify(req.query, null, 2) + "\n";
+                     
+	transporter.sendMail(mailOptions, function(error, response){console.log(error)});
     res.end("1");
 });
 

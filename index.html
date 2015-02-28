@@ -486,17 +486,16 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <h2><span class="caresLogo"><span class="blue">CARES</span><span class="red">app</span>™ </span></h2>
+                            <p class="item-intro text-muted">Multiplatform Apps + Server Stack.</p>
+                            <p class="item-intro text-muted">
+                                <a href='https://itunes.apple.com/us/app/cares/id632320931?ls=1&mt=8' target='_blank'> <i class="fa fa-apple"></i> App Store </a>
+                                <a href='https://play.google.com/store/apps/details?id=com.ihhs.cares' target='_blank'> <i class="fa fa-android"></i> Google Play</a>
+                                <a href='https://caresapp.me/apps/user.html' target='_blank'> <i class="fa fa-share"></i> Webapp</a>
+                                <a href='https://caresapp.me' target='_blank'> <i class="fa fa-angle-right"></i> More information </a>
+                            </p>
                             <img class="img-responsive" src="img/portfolio/roundicons-free.png" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <p>
-                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                            <ul class="list-inline">
-                                <li>Date: July 2014</li>
-                                <li>Client: Round Icons</li>
-                                <li>Category: Graphic Design</li>
-                            </ul>
+                            <p><span class="caresLogo"><span class="blue">CARES</span><span class="red">app</span>™ </span> is a mobile-capable platform that provides a secure, direct <b>connection</b> between the patient and their healthcare provider. The web-based, responsive and touch-enabled <b>design</b> makes it universally accessible on mobile phones and on any modern desktop web browser. Its architecture of <i> "<span class="caresLogo"><span class="blue">CARE</span><span class="red">teams</span>™</span>"</i> allows healthcare providers to <b>publish</b> information which is available to users in a structured, easy-to-read, easy-to-share manner.</p>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-angle-left"></i> Portfolio </button>
                         </div>
                     </div>
@@ -640,6 +639,58 @@
     </div>
 
     <!-- jQuery -->
+    <script>
+        function loadFile(filename, callback)
+{
+        var aXMLHttpRequest = getXMLHTTPRequest();
+            var allData;
+
+                if (aXMLHttpRequest)
+                        {
+                                    aXMLHttpRequest.open("GET", filename, true);
+                                            
+                                            aXMLHttpRequest.onreadystatechange = function (aEvt) {
+                                                            if(aXMLHttpRequest.readyState == 4){
+                                                                                allData = aXMLHttpRequest.responseText;
+                                                                                                callback(allData)
+                                                                                                                }
+                                                                    };
+                                                    
+                                                    //Lets fire off the request
+                                                    aXMLHttpRequest.send(null);
+                                                        }
+                    else
+                            {
+                                        //Oh no, the XMLHttpRequest object couldn't be instantiated.
+                                        alert("A problem occurred instantiating the XMLHttpRequest object.");
+                                            }
+}
+
+
+fnslib.js:893 function getXMLHTTPRequest()
+{
+        var request;
+            
+            // Lets try using ActiveX to instantiate the XMLHttpRequest object
+            try{
+                        request = new ActiveXObject("Microsoft.XMLHTTP");
+                            }catch(ex1){
+                                        try{
+                                                        request = new ActiveXObject("Msxml2.XMLHTTP");
+                                                                }catch(ex2){
+                                                                                request = null;
+                                                                                        }
+                                            }
+
+                // If the previous didn't work, lets check if the browser natively support XMLHttpRequest 
+                if(!request && typeof XMLHttpRequest != "undefined"){
+                            //The browser does, so lets instantiate the object
+                            request = new XMLHttpRequest();
+                                }
+
+                    return request;
+}
+    </script>
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
